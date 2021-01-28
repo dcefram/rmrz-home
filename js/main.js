@@ -12,7 +12,7 @@ firstNames.addEventListener('animationend', () => {
 
 let timeout = setTimeout(() => {
   familyName.classList.add('animate');
-}, 5000);
+}, 3000);
 
 document.body.addEventListener('click', () => {
   if (familyName.classList.contains('animate')) {

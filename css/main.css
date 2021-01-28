@@ -11,11 +11,13 @@ header {
 main {
   margin-top: 5em;
   opacity: 0;
+  pointer-events: none;
 }
 
 main.animate {
   opacity: 1;
   animation: show-contents 0.5s;
+  pointer-events: initial;
 }
 
 details {
@@ -36,9 +38,21 @@ details > summary > strong {
   font-size: 1.4em;
 }
 
+details ul {
+  list-style: none;
+}
+
+details ul li ul {
+  list-style: disc;
+}
+
+details > ul > li {
+  margin-bottom: 1em;
+}
+
 details > p {
   font-size: 0.8em;
-  padding-left: 1em;
+  padding-left: 2.5em;
 }
 
 address {
