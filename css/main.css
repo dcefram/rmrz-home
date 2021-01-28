@@ -1,0 +1,132 @@
+body {
+  padding: 2em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7px;
+}
+
+header {
+  display: inline-block;
+}
+
+main {
+  margin-top: 5em;
+  opacity: 0;
+}
+
+main.animate {
+  opacity: 1;
+  animation: show-contents 0.5s;
+}
+
+details {
+  margin-bottom: 1em;
+  font-size: 3em;
+}
+
+details > summary {
+  border: none;
+  outline: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary > strong {
+  font-size: 1.4em;
+}
+
+details > p {
+  font-size: 0.8em;
+  padding-left: 1em;
+}
+
+address {
+  font-size: 2em;
+}
+
+.first-names {
+  font-size: 2em;
+  text-align: right;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+.first-names.animate {
+  transform: scaleY(1);
+  animation: first-name-expanded 0.5s;
+}
+
+.family-name {
+  display: flex;
+  font-family: 'Staatliches', sans-serif;
+  font-size: 10em;
+  line-height: 0.75em;
+}
+
+.family-name div:nth-child(even) {
+  max-width: 0;
+  overflow: hidden;
+}
+
+.family-name.animate div:nth-child(even) {
+  max-width: 2em;
+  animation: family-name-expanded 1s;
+}
+
+@keyframes first-name-expanded {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes family-name-expanded {
+  from {
+    max-width: 0;
+  }
+
+  to {
+    max-width: 2em;
+  }
+}
+
+@keyframes show-contents {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    max-width: 768px;
+  }
+
+  details {
+    font-size: 1em;
+  }
+
+  details > p {
+    font-size: 1em;
+  }
+
+  .first-names {
+    font-size: 1em;
+  }
+
+  address {
+    font-size: 0.8em;
+  }
+}
+
