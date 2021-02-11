@@ -22,5 +22,5 @@ document.body.addEventListener('click', () => {
   clearTimeout(timeout);
   timeout = setTimeout(() => {
     familyName.classList.add('animate');
-  }, 1000);
+  }, 300);
 });
