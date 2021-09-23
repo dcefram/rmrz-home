@@ -1,7 +1,7 @@
 body {
   padding: 2em;
   font-family: 'Montserrat', sans-serif;
-  font-size: 7px;
+  font-size: 10px;
 }
 
 header {
@@ -22,7 +22,8 @@ main.animate {
 
 details {
   margin-bottom: 1em;
-  font-size: 3em;
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
 details > summary {
@@ -62,7 +63,7 @@ details > p {
 }
 
 address {
-  font-size: 2em;
+  font-size: 1.25em;
 }
 
 .first-names {
